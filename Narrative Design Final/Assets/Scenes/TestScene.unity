@@ -488,6 +488,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1321945587083808321, guid: 5c8fcb853f5b3af4ca48ffc63e86395d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6881502542350298044, guid: 5c8fcb853f5b3af4ca48ffc63e86395d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -537,6 +541,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c8fcb853f5b3af4ca48ffc63e86395d, type: 3}
+--- !u!1 &1427057531 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1321945587083808321, guid: 5c8fcb853f5b3af4ca48ffc63e86395d, type: 3}
+  m_PrefabInstance: {fileID: 1427057530}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1468478803
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,6 +685,10 @@ PrefabInstance:
       propertyPath: message
       value: 
       objectReference: {fileID: 526204972}
+    - target: {fileID: 6020292920844301864, guid: 2e02d7917e4afd54d86faa2e6c9a082e, type: 3}
+      propertyPath: messageBox
+      value: 
+      objectReference: {fileID: 1427057531}
     - target: {fileID: 7128649499514335178, guid: 2e02d7917e4afd54d86faa2e6c9a082e, type: 3}
       propertyPath: m_Name
       value: Lore Key
@@ -737,6 +750,10 @@ PrefabInstance:
       propertyPath: message
       value: 
       objectReference: {fileID: 526204972}
+    - target: {fileID: 360744834522246489, guid: a7cc29c45596fb84e9ef693cf60c4388, type: 3}
+      propertyPath: messageBox
+      value: 
+      objectReference: {fileID: 1427057531}
     - target: {fileID: 386116111384523120, guid: a7cc29c45596fb84e9ef693cf60c4388, type: 3}
       propertyPath: m_Name
       value: 'Lore Item '
@@ -916,6 +933,10 @@ PrefabInstance:
       propertyPath: message
       value: 
       objectReference: {fileID: 526204972}
+    - target: {fileID: 7331331707298904813, guid: f63cf174b45fef14e9478d62d91c46dc, type: 3}
+      propertyPath: messageBox
+      value: 
+      objectReference: {fileID: 1427057531}
     - target: {fileID: 8109884890460523140, guid: f63cf174b45fef14e9478d62d91c46dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.279
