@@ -7,24 +7,25 @@ public class UItext : MonoBehaviour
 
     [SerializeField] public GameObject messageBox;
     [SerializeField] public TextMeshProUGUI message;
-    private string text;
+    [SerializeField] private string text;
 
     private void OnTriggerEnter(Collider other)
     {
+        print("UI trigger entered");
         message.text = text;
-        messageBox.gameObject.SetActive(true);
+        messageBox.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        messageBox.gameObject.SetActive(false);
+        messageBox.SetActive(false);
     }
 
     private void OnDestroy()
     {
         if (message != null)
         {
-            messageBox.gameObject.SetActive(false);
+            messageBox.SetActive(false);
         }
     }
 }
