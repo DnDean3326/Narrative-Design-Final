@@ -456,6 +456,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 032a1429a1946bd47922a5086b986f30, type: 3}
+--- !u!1 &512630054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4493151823034243824, guid: 5c8fcb853f5b3af4ca48ffc63e86395d, type: 3}
+  m_PrefabInstance: {fileID: 1427057530}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &521182630
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,6 +947,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52187d2cac5e07245a331370f5767e86, type: 3}
+--- !u!114 &1129701379 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8603157703006438521, guid: 5c8fcb853f5b3af4ca48ffc63e86395d, type: 3}
+  m_PrefabInstance: {fileID: 1427057530}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &1375440926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,6 +1136,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1321945587083808321, guid: 5c8fcb853f5b3af4ca48ffc63e86395d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493151823034243824, guid: 5c8fcb853f5b3af4ca48ffc63e86395d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858013814907819159, guid: 5c8fcb853f5b3af4ca48ffc63e86395d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6881502542350298044, guid: 5c8fcb853f5b3af4ca48ffc63e86395d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1447,6 +1475,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52187d2cac5e07245a331370f5767e86, type: 3}
+--- !u!114 &1608037864 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6516039048931531377, guid: 5c8fcb853f5b3af4ca48ffc63e86395d, type: 3}
+  m_PrefabInstance: {fileID: 1427057530}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &1622473756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1958,6 +1997,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Person
       objectReference: {fileID: 0}
+    - target: {fileID: 7231716818610817644, guid: f63cf174b45fef14e9478d62d91c46dc, type: 3}
+      propertyPath: message
+      value: 
+      objectReference: {fileID: 526204972}
+    - target: {fileID: 7231716818610817644, guid: f63cf174b45fef14e9478d62d91c46dc, type: 3}
+      propertyPath: namePlate
+      value: 
+      objectReference: {fileID: 1129701379}
+    - target: {fileID: 7231716818610817644, guid: f63cf174b45fef14e9478d62d91c46dc, type: 3}
+      propertyPath: messageBox
+      value: 
+      objectReference: {fileID: 1427057531}
+    - target: {fileID: 7231716818610817644, guid: f63cf174b45fef14e9478d62d91c46dc, type: 3}
+      propertyPath: displayImage
+      value: 
+      objectReference: {fileID: 1608037864}
+    - target: {fileID: 7231716818610817644, guid: f63cf174b45fef14e9478d62d91c46dc, type: 3}
+      propertyPath: characterSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b84338f725f454449b5971321eab5629, type: 3}
+    - target: {fileID: 7231716818610817644, guid: f63cf174b45fef14e9478d62d91c46dc, type: 3}
+      propertyPath: namePlateObject
+      value: 
+      objectReference: {fileID: 512630054}
     - target: {fileID: 7331331707298904813, guid: f63cf174b45fef14e9478d62d91c46dc, type: 3}
       propertyPath: message
       value: 

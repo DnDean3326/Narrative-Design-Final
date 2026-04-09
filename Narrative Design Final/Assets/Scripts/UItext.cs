@@ -1,21 +1,19 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class UItext : MonoBehaviour
 {
+    public GameObject messageBox;
+    public TextMeshProUGUI message;
+    public string text;
 
-    [SerializeField] public GameObject messageBox;
-    [SerializeField] public TextMeshProUGUI message;
-    [SerializeField] private string text;
-
-    private void OnTriggerEnter(Collider other)
+    public virtual void OnTriggerEnter(Collider other)
     {
         message.text = text;
         messageBox.SetActive(true);
     }
 
-    private void OnTriggerExit(Collider other)
+    public virtual void OnTriggerExit(Collider other)
     {
         messageBox.SetActive(false);
     }
