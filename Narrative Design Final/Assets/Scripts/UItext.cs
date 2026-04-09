@@ -11,7 +11,6 @@ public class UItext : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("UI trigger entered");
         message.text = text;
         messageBox.SetActive(true);
     }
