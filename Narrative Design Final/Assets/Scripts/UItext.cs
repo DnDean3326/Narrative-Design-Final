@@ -1,35 +1,35 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class UItext : MonoBehaviour
 {
-  
+    public GameObject messageBox;
     public TextMeshProUGUI message;
     public string text;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
-    {
-     
-    }
 
-    private void OnTriggerEnter(Collider other)
+    public virtual void Awake()
+    {
+        GameObject hud = GameObject.FindWithTag("PlayerHUD");
+        messageBox = hud.transform.Find("Textbox").gameObject;
+        message = messageBox.GetComponentInChildren<TextMeshProUGUI>();
+    }
+    
+    public virtual void OnTriggerEnter(Collider other)
     {
         message.text = text;
-        message.gameObject.SetActive(true);
-
+        messageBox.SetActive(true);
     }
 
-    private void OnTriggerExit(Collider other)
+    public virtual void OnTriggerExit(Collider other)
     {
-        message.gameObject.SetActive(false);
+        messageBox.SetActive(false);
     }
 
     private void OnDestroy()
     {
         if (message != null)
         {
-            message.gameObject.SetActive(false);
+            messageBox.SetActive(false);
         }
     }
 }

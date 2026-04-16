@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7600650477102276409}
   - component: {fileID: 6179889205750739307}
   - component: {fileID: 4806855807753798363}
-  - component: {fileID: 7331331707298904813}
   - component: {fileID: 3010710725187799052}
+  - component: {fileID: 7231716818610817644}
   m_Layer: 0
   m_Name: Person
   m_TagString: Untagged
@@ -112,24 +112,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6770129
+  m_Radius: 0.75
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0.17701292, y: 0, z: 0}
---- !u!114 &7331331707298904813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6608595080174423678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8a1c963c3ae01042b849b32f13a7628, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UItext
-  message: {fileID: 0}
-  text: I am a Person
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &3010710725187799052
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -153,3 +139,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7231716818610817644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608595080174423678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c29d9a84b0b6946a54a0d0b37d6241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterText
+  messageBox: {fileID: 0}
+  message: {fileID: 0}
+  text: I am a Ghost
+  characterNamePlate: {fileID: 0}
+  characterSprite: {fileID: 0}
+  characterName: Ghost

@@ -113,8 +113,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.61334753
-  m_Center: {x: 0.11334753, y: 0, z: 0}
+  m_Radius: 0.75
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &115856039483176030
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -189,5 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a1c963c3ae01042b849b32f13a7628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UItext
+  messageBox: {fileID: 0}
   message: {fileID: 0}
   text: I'm a Key with Lore
