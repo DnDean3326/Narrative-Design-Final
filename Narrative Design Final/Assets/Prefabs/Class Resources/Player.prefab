@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 4581098519378420689}
   m_Layer: 5
   m_Name: Nameplate
-  m_TagString: Untagged
+  m_TagString: Nameplate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 2876924171036913793}
   m_Layer: 5
   m_Name: Player HUD
-  m_TagString: Untagged
+  m_TagString: PlayerHUD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 5286691735057277133}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -934,8 +934,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2491665548582544202}
   - {fileID: 5783470196019055644}
+  - {fileID: 2491665548582544202}
   - {fileID: 2294480484696931585}
   - {fileID: 1736727228322720513}
   m_Father: {fileID: 0}
@@ -1034,6 +1034,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df4d83604790af743ae4936bf841617c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  characterImage: {fileID: 4858013814907819159}
+  namePlate: {fileID: 4493151823034243824}
+  textBox: {fileID: 1321945587083808321}
 --- !u!114 &156922460149305377
 MonoBehaviour:
   m_ObjectHideFlags: 0

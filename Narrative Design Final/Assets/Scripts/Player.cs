@@ -8,6 +8,10 @@ public class Player : MonoBehaviour
     FPController FPController;
     PlayerInteraction interaction;
 
+    [SerializeField] private GameObject characterImage;
+    [SerializeField] private GameObject namePlate;
+    [SerializeField] private GameObject textBox;
+
     #region Input Functions
     void OnMove(InputValue value)
     {
@@ -63,5 +67,8 @@ public class Player : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        characterImage.SetActive(false);
+        namePlate.SetActive(false);
+        textBox.SetActive(false);
     }
 }

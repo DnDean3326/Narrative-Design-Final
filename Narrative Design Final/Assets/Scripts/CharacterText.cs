@@ -5,11 +5,22 @@ using UnityEngine.UI;
 
 public class CharacterText : UItext
 {
-    [SerializeField] private GameObject namePlateObject;
-    [SerializeField] private TextMeshProUGUI namePlate;
-    [SerializeField] private Image displayImage;
+    private GameObject nameplateObject;
+    private TextMeshProUGUI nameplate;
+    private Image displayImage;
     [SerializeField] private Sprite characterSprite;
     [SerializeField] private string characterName;
+
+    public override void Awake()
+    {
+        GameObject hud = GameObject.FindWithTag("PlayerHUD");
+        messageBox = hud.transform.Find("Textbox").gameObject;
+        message = messageBox.GetComponentInChildren<TextMeshProUGUI>();
+        
+        nameplateObject = hud.transform.Find("Nameplate").gameObject;
+        nameplate = nameplateObject.GetComponentInChildren<TextMeshProUGUI>();
+        displayImage = hud.transform.Find("CharacterImage").gameObject.GetComponent<Image>();
+    }
     
     public override void OnTriggerEnter(Collider other)
     {
@@ -17,9 +28,9 @@ public class CharacterText : UItext
         messageBox.SetActive(true);
         
         displayImage.gameObject.SetActive(true);
-        namePlateObject.SetActive(true);
+        nameplateObject.SetActive(true);
         displayImage.sprite = characterSprite;
-        namePlate.text = characterName;
+        nameplate.text = characterName;
     }
 
     public override void OnTriggerExit(Collider other)
@@ -27,6 +38,6 @@ public class CharacterText : UItext
         messageBox.SetActive(false);
         
         displayImage.gameObject.SetActive(false);
-        namePlateObject.SetActive(false);
+        nameplateObject.SetActive(false);
     }
 }
