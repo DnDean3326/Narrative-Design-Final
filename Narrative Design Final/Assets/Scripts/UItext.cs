@@ -3,9 +3,9 @@ using TMPro;
 
 public class UItext : MonoBehaviour
 {
-    public GameObject messageBox;
-    public TextMeshProUGUI message;
-    public string text;
+    protected GameObject messageBox;
+    protected TextMeshProUGUI message;
+    [SerializeField] protected string text;
 
     public virtual void Awake()
     {
