@@ -2,22 +2,27 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.Cinemachine;
 using UnityEngine;
+using System.Linq;
 
 public class PlayerInteraction : MonoBehaviour
 {
     public float interactDistance = 5f;
 
-    [SerializeField] private List<string> inventoryList = new List<string>();
+    [SerializeField] private List<InteractableItem> inventoryList = new List<InteractableItem>();
+    [SerializeField] private GameObject inventoryBg;
+    [SerializeField] private TextMeshProUGUI inventoryText;
 
     private CinemachineCamera mainCamera;
-    private Canvas HUD;
+    private Canvas hud;
     private GameObject pickupText;
 
     private void Start()
     {
         mainCamera = transform.GetComponentInChildren<CinemachineCamera>();
-        HUD = transform.GetComponentInChildren<Canvas>();
-        pickupText = HUD.transform.Find("ItemPickupText").gameObject;
+        hud = transform.GetComponentInChildren<Canvas>();
+        pickupText = hud.transform.Find("ItemPickupText").gameObject;
+        
+        inventoryBg.SetActive(false);
     }
 
     public void TryInteract()
@@ -32,7 +37,7 @@ public class PlayerInteraction : MonoBehaviour
 
             InteractableItem item = hit.collider.gameObject.GetComponent<InteractableItem>();
 
-            if (item.requiredItem == "" || inventoryList.Contains(item.requiredItem))
+            if (item.requiredItem == "" || inventoryList.Any(t => t.itemFlag == item.requiredItem))
             {
                 item.onInteractEvent?.Invoke();
                 if(item.requiredItem != "")
@@ -53,25 +58,59 @@ public class PlayerInteraction : MonoBehaviour
 
     public void AddItemToInventory(InteractableItem item)
     {
-        inventoryList.Add(item.itemFlag);
-        DisplayText(item.gameObject.name + " picked up");
+        if (inventoryList.Count == 0) {
+            inventoryBg.SetActive(true);
+        }
+        inventoryList.Add(item);
+        DisplayText(item.itemFlag + " picked up");
+        UpdateInventoryDisplay();
     }
 
-    public void RemoveItemFromInventory(string item)
+    public void RemoveItemFromInventory(string itemName)
     {
-        if (inventoryList.Contains(item))
+        if (inventoryList.Any(t => t.itemFlag == itemName))
         {
-            inventoryList.Remove(item);
+            InteractableItem itemToRemove = inventoryList.Find(t => t.itemFlag == itemName);
+            inventoryList.Remove(itemToRemove);
         }
         else
         {
-            Debug.LogWarning("Item " +  item + " not in player's inventory");
+            Debug.LogWarning("Item " + itemName + " not in player's inventory");
         }
+
+        if (inventoryList.Count == 0) {
+            inventoryBg.SetActive(false);
+        }
+    }
+
+    private void UpdateInventoryDisplay()
+    {
+        var rect = inventoryBg.GetComponent<RectTransform>().sizeDelta;
+        float bgYLength = (10 * 2 + inventoryList.Count * 36 + (inventoryList.Count - 1) * 5);
+        rect = new Vector2(rect.x, bgYLength);
+        inventoryBg.GetComponent<RectTransform>().sizeDelta = rect;
+        
+        string inventoryString = null;
+        foreach (InteractableItem item in inventoryList) {
+            string newItem = "- " + item.itemFlag + "\n";
+            inventoryString += newItem;
+        }
+        inventoryText.text = inventoryString;
     }
 
     private void DisplayText(string text)
     {
         pickupText.GetComponent<TextMeshProUGUI>().text = text;
         pickupText.GetComponent<Animation>().Play();
+    }
+
+    public void ChangeInventoryVisibility(bool visible)
+    {
+        inventoryBg.SetActive(visible);
+    }
+
+    public List<InteractableItem> GetInventory()
+    {
+        return inventoryList;
     }
 }

@@ -11,7 +11,7 @@ public class CharacterText : UItext
     [SerializeField] private Sprite characterSprite;
     [SerializeField] private string characterName;
 
-    public override void Awake()
+    protected override void Awake()
     {
         GameObject hud = GameObject.FindWithTag("PlayerHUD");
         messageBox = hud.transform.Find("Textbox").gameObject;
@@ -22,7 +22,7 @@ public class CharacterText : UItext
         displayImage = hud.transform.Find("CharacterImage").gameObject.GetComponent<Image>();
     }
     
-    public override void OnTriggerEnter(Collider other)
+    protected override void OnTriggerEnter(Collider other)
     {
         message.text = text;
         messageBox.SetActive(true);
@@ -33,7 +33,7 @@ public class CharacterText : UItext
         nameplate.text = characterName;
     }
 
-    public override void OnTriggerExit(Collider other)
+    protected override void OnTriggerExit(Collider other)
     {
         messageBox.SetActive(false);
         

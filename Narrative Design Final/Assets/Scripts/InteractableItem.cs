@@ -21,6 +21,6 @@ public class InteractableItem : MonoBehaviour
 
     public void DestroyObject()
     {
-        Destroy(this.gameObject);
+        this.gameObject.SetActive(false);
     }
 }

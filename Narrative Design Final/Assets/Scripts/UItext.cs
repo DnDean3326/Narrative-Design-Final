@@ -5,22 +5,22 @@ public class UItext : MonoBehaviour
 {
     protected GameObject messageBox;
     protected TextMeshProUGUI message;
-    [SerializeField] protected string text;
+    [TextArea] [SerializeField] protected string text;
 
-    public virtual void Awake()
+    protected virtual void Awake()
     {
         GameObject hud = GameObject.FindWithTag("PlayerHUD");
         messageBox = hud.transform.Find("Textbox").gameObject;
         message = messageBox.GetComponentInChildren<TextMeshProUGUI>();
     }
     
-    public virtual void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         message.text = text;
         messageBox.SetActive(true);
     }
 
-    public virtual void OnTriggerExit(Collider other)
+    protected virtual void OnTriggerExit(Collider other)
     {
         messageBox.SetActive(false);
     }
