@@ -3,24 +3,24 @@ using TMPro;
 
 public class UItext : MonoBehaviour
 {
-    public GameObject messageBox;
-    public TextMeshProUGUI message;
-    public string text;
+    protected GameObject messageBox;
+    protected TextMeshProUGUI message;
+    [TextArea] [SerializeField] protected string text;
 
-    public virtual void Awake()
+    protected virtual void Awake()
     {
         GameObject hud = GameObject.FindWithTag("PlayerHUD");
         messageBox = hud.transform.Find("Textbox").gameObject;
         message = messageBox.GetComponentInChildren<TextMeshProUGUI>();
     }
     
-    public virtual void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         message.text = text;
         messageBox.SetActive(true);
     }
 
-    public virtual void OnTriggerExit(Collider other)
+    protected virtual void OnTriggerExit(Collider other)
     {
         messageBox.SetActive(false);
     }

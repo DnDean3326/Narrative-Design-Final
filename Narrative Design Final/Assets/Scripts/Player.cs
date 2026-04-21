@@ -8,9 +8,12 @@ public class Player : MonoBehaviour
     FPController FPController;
     PlayerInteraction interaction;
 
+    private bool isInMenu = false;
+
     [SerializeField] private GameObject characterImage;
     [SerializeField] private GameObject namePlate;
     [SerializeField] private GameObject textBox;
+    [SerializeField] private GameObject itemMenu;
 
     #region Input Functions
     void OnMove(InputValue value)
@@ -20,6 +23,9 @@ public class Player : MonoBehaviour
 
     void OnLook(InputValue value)
     {
+        if (isInMenu) {
+            return;
+        }
         FPController.lookInput = value.Get<Vector2>();
     }
 
@@ -69,6 +75,24 @@ public class Player : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         characterImage.SetActive(false);
         namePlate.SetActive(false);
+        textBox.SetActive(false);
+        itemMenu.SetActive(false);
+    }
+
+    public void SetIsInMenu(bool menuStatus)
+    {
+        isInMenu = menuStatus;
+        if (!isInMenu) {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        } else {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
+    public void HideTextbox()
+    {
         textBox.SetActive(false);
     }
 }

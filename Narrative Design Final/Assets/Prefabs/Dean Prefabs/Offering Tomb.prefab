@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8908402665119530262, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ebb91ff1de9788a47a376f682d6c376d, type: 2}
     - target: {fileID: -8679921383154817045, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -22,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.5
+      value: -19.848999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30,15 +34,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7071068
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
       propertyPath: m_LocalRotation.y
@@ -54,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -64,12 +68,123 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6093592463355912122, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ebb91ff1de9788a47a376f682d6c376d, type: 2}
+    - target: {fileID: -4163678394402964172, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ebb91ff1de9788a47a376f682d6c376d, type: 2}
+    - target: {fileID: 70605071860439221, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ebb91ff1de9788a47a376f682d6c376d, type: 2}
+    - target: {fileID: 798965914020070982, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ebb91ff1de9788a47a376f682d6c376d, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
       propertyPath: m_Name
-      value: Offering Tomb 4
+      value: Offering Tomb
       objectReference: {fileID: 0}
+    - target: {fileID: 1129496810705857465, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ebb91ff1de9788a47a376f682d6c376d, type: 2}
+    - target: {fileID: 1778566710321421473, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ebb91ff1de9788a47a376f682d6c376d, type: 2}
+    - target: {fileID: 6609974927824979862, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ebb91ff1de9788a47a376f682d6c376d, type: 2}
+    - target: {fileID: 7071182760956848314, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ebb91ff1de9788a47a376f682d6c376d, type: 2}
+    - target: {fileID: 7202271454713460447, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ebb91ff1de9788a47a376f682d6c376d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 687111445341340937}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1232268074985577482}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3489100023343918167}
   m_SourcePrefab: {fileID: 100100000, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
+--- !u!1 &4239446901546538501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e6a480e4789cdf44b1a127a0d75e9ef, type: 3}
+  m_PrefabInstance: {fileID: 3896989919259847508}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &687111445341340937
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4239446901546538501}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.3794744, y: 7.277503, z: 3.6}
+  m_Center: {x: -3.4567192, y: 3.1387515, z: -7.7204715e-15}
+--- !u!114 &1232268074985577482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4239446901546538501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edff84dea6055a640b0c8092b71f3f9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OfferingText
+  text: I kinda want a crown...
+  characterName: Offering Tomb
+  requiredOffering: {fileID: 0}
+  heldOffering: {fileID: 0}
+  correctOffering: 0
+  itemButtonPrefab: {fileID: 653051523267152538, guid: 25b6e813d9240db44b4b9ef185fc154e, type: 3}
+  takeOfferingButtonPrefab: {fileID: 653051523267152538, guid: 73072a07d0917114886a531c869296b1, type: 3}
+--- !u!65 &3489100023343918167
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4239446901546538501}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.3794744, y: 7.277503, z: 5.726524}
+  m_Center: {x: -3.4567192, y: 3.1387515, z: 1.0632625}
