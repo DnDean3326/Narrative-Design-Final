@@ -80,6 +80,7 @@ public class OfferingText : UItext
         messageBox.SetActive(false);
         itemMenu.SetActive(false);
         FindFirstObjectByType<Player>().SetIsInMenu(false);
+        FindFirstObjectByType<PlayerInteraction>().ChangeInventoryVisibility(true);
     }
 
     public void OfferItem(InteractableItem offering)
@@ -102,5 +103,10 @@ public class OfferingText : UItext
             correctOffering = false;
         }
         GenerateItemButtons();
+    }
+
+    public bool HasCorrectOffering()
+    {
+        return correctOffering;
     }
 }

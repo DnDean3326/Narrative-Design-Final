@@ -90,4 +90,9 @@ public class Player : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
     }
+
+    public void HideTextbox()
+    {
+        textBox.SetActive(false);
+    }
 }

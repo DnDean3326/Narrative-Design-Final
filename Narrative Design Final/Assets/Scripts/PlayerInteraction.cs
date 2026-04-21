@@ -78,6 +78,7 @@ public class PlayerInteraction : MonoBehaviour
             Debug.LogWarning("Item " + itemName + " not in player's inventory");
         }
 
+        UpdateInventoryDisplay();
         if (inventoryList.Count == 0) {
             inventoryBg.SetActive(false);
         }

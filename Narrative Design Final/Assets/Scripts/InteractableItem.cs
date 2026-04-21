@@ -12,11 +12,13 @@ public class InteractableItem : MonoBehaviour
     public void AddToPlayerInventory()
     {
         FindFirstObjectByType<PlayerInteraction>().GetComponent<PlayerInteraction>().AddItemToInventory(this);
+        FindFirstObjectByType<Player>().HideTextbox();
     }
 
     public void RemoveItemFromPlayerInventory(string item)
     {
         FindFirstObjectByType<PlayerInteraction>().GetComponent<PlayerInteraction>().RemoveItemFromInventory(item);
+        FindFirstObjectByType<Player>().HideTextbox();
     }
 
     public void DestroyObject()
