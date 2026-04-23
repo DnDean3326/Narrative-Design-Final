@@ -16,13 +16,18 @@ public class PlayerInteraction : MonoBehaviour
     private Canvas hud;
     private GameObject pickupText;
 
-    private void Start()
+    private void Awake()
     {
         mainCamera = transform.GetComponentInChildren<CinemachineCamera>();
         hud = transform.GetComponentInChildren<Canvas>();
         pickupText = hud.transform.Find("ItemPickupText").gameObject;
         
         inventoryBg.SetActive(false);
+    }
+
+    private void Start()
+    {
+        inventoryText.text = "";
     }
 
     public void TryInteract()

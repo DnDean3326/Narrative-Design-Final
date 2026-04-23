@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +16,9 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject namePlate;
     [SerializeField] private GameObject textBox;
     [SerializeField] private GameObject itemMenu;
+    [SerializeField] private GameObject introButton;
+
+    [TextArea] [SerializeField] private string introText;
 
     #region Input Functions
     void OnMove(InputValue value)
@@ -26,9 +30,7 @@ public class Player : MonoBehaviour
     void OnLook(InputValue value)
     {
         if (isInScene) return;
-        if (isInMenu) {
-            return;
-        }
+        if (isInMenu) return;
         FPController.lookInput = value.Get<Vector2>();
     }
 
@@ -78,24 +80,39 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        isInMenu = true;
+        isInScene = true;
+        
         characterImage.SetActive(false);
         namePlate.SetActive(false);
-        textBox.SetActive(false);
         itemMenu.SetActive(false);
+        
+        // Intro Text Set
+        textBox.SetActive(true);
+        introButton.SetActive(true);
+        textBox.GetComponentInChildren<TextMeshProUGUI>().text = introText;
+    }
+
+    public void ClearIntroText()
+    {
+        textBox.SetActive(false);
+        introButton.SetActive(false);
+        isInMenu = false;
+        isInScene = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void SetIsInMenu(bool menuStatus)
     {
         isInMenu = menuStatus;
         if (!isInMenu) {
-            FPController.lookInput = Vector2.zero;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         } else {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            FPController.lookInput = Vector2.zero;
         }
     }
 

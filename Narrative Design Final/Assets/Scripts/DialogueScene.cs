@@ -25,7 +25,6 @@ public class DialogueScene : CharacterText
 
     public void OnClick()
     {
-        print("I was clicked!");
         if (currentDialogue < dialogues.Count) {
             currentDialogue++;
 
