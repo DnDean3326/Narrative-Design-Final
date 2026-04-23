@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     PlayerInteraction interaction;
 
     private bool isInMenu = false;
+    private bool isInScene = false;
 
     [SerializeField] private GameObject characterImage;
     [SerializeField] private GameObject namePlate;
@@ -18,11 +19,13 @@ public class Player : MonoBehaviour
     #region Input Functions
     void OnMove(InputValue value)
     {
+        if (isInScene) return;
         FPController.moveInput = value.Get<Vector2>();
     }
 
     void OnLook(InputValue value)
     {
+        if (isInScene) return;
         if (isInMenu) {
             return;
         }
@@ -31,11 +34,13 @@ public class Player : MonoBehaviour
 
     void OnSprint(InputValue value)
     {
+        if (isInScene) return;
         FPController.sprintInput = value.isPressed;
     }
 
     void OnJump(InputValue value)
     {
+        if (isInScene) return;
         if (value.isPressed)
         {
             FPController.TryJump();
@@ -44,6 +49,7 @@ public class Player : MonoBehaviour
 
     void OnInteract(InputValue value)
     {
+        if (isInScene) return;
         if (value.isPressed)
         {
             interaction.TryInteract();
@@ -52,6 +58,7 @@ public class Player : MonoBehaviour
 
     void OnCrouch(InputValue value)
     {
+        if (isInScene) return;
         FPController.crouchInput = value.isPressed;
     }
     #endregion
@@ -89,6 +96,12 @@ public class Player : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
+    }
+
+    public void SetIsInScene(bool sceneStatus)
+    {
+        isInScene = sceneStatus;
+        FPController.moveInput = Vector2.zero;
     }
 
     public void HideTextbox()

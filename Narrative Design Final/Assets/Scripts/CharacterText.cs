@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class CharacterText : UItext
 {
-    private GameObject nameplateObject;
-    private TextMeshProUGUI nameplate;
-    private Image displayImage;
+    protected GameObject nameplateObject;
+    protected TextMeshProUGUI nameplate;
+    protected Image displayImage;
     [SerializeField] private Sprite characterSprite;
     [SerializeField] private string characterName;
 
