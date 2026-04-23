@@ -90,6 +90,7 @@ public class Player : MonoBehaviour
     {
         isInMenu = menuStatus;
         if (!isInMenu) {
+            FPController.lookInput = Vector2.zero;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         } else {
@@ -101,7 +102,9 @@ public class Player : MonoBehaviour
     public void SetIsInScene(bool sceneStatus)
     {
         isInScene = sceneStatus;
-        FPController.moveInput = Vector2.zero;
+        if (isInScene) {
+            FPController.moveInput = Vector2.zero;
+        }
     }
 
     public void HideTextbox()
